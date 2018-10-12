@@ -1,0 +1,221 @@
+@import ../../_includes
+
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.dongtay-header
+	background: color-get($mau,trang)
+	box-shadow: 0 0 5px rgba(0,0,0,.5)
+	&.fixedheader
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 999
+		transition: all .25s ease-in-out
+		&.active , &.expand
+	.contactinfo
+		margin-bottom: 0 
+		display: flex
+		+mar(0)
+		+pad(0)
+		flex-wrap: wrap
+		li 
+			list-style: none
+			font-size: 1.25rem
+			a, .link
+				color: color-get($mau,duong-1)
+				display: inline-block
+				text-decoration: none
+				+pad(0.5rem 1rem)
+				cursor: default
+			&:hover, &.active, &.show
+				a
+					color: color-get($mau,trang)
+	.k-menu-bar
+		color: color-get($mau,main)
+		.k-button-toggle
+			color: color-get($mau,main)
+			font-size: 2rem
+		#logo
+			img
+				max-height: 3.2rem
+		ul
+			.nav-item
+				.nav-link
+					color: color-get($mau,main)
+
+	.k-responsive-menu
+		background: color-get($mau,main)
+		.navbar-brand
+			color: color-get($mau,trang)
+			img
+				max-height: 2rem
+		ul
+			.nav-item
+				.nav-link
+					color: color-get($mau,duong-1)
+		.k-menu-bar
+			.k-button-toggle
+				color: color-get($mau,trang)
+
+	// CHANGE MENU
+
+	+media-breakpoint-up(lg)
+		.topbar
+			justify-content: flex-end
+			display: flex
+			+transition(.3s all ease-in-out)
+			.contactinfo,
+				display: flex
+				flex-direction: row
+				// padding: 0 .5rem
+				align-items: center
+				li 
+					color: darken(color-get($mau,trang),50%)
+					+ li 
+						margin-right: 0
+					a, .link
+						color: color-get($mau,xam-1)
+						+pad(.75rem .5rem .75rem 1rem)
+						font-size: 1rem
+						&:hover
+							color: darken(color-get($mau,main),0%)
+					i,em
+						color: color-get($mau,duong-2)
+		.k-responsive-menu
+			background: color-get($mau,trang)
+			padding-top: 0
+			padding-bottom: 0
+			position: relative
+			.navbar-brand
+				img 
+					max-height: 5.2rem
+					+transition(.3s all ease-in-out)
+			.nav-wrapper
+				background: color-get($mau,main)
+				ul
+					padding: 1rem 0
+					.nav-item
+						+pad(0 1rem)
+						transform: skew(-20deg)
+						border-right: color-get($mau,duong-1) 1px solid
+						&:first-child
+							padding-left: 0
+						&:last-child
+							border-right: 0
+							padding-right: 0
+						.nav-link
+							color: color-get($mau,duong-1)
+							font-weight: 400
+							font-size: 0.875rem
+							transform: skew(20deg)
+							line-height: 1.467
+							+transition(.3s ease-in-out)
+							text-transform: uppercase
+						&:hover, &.active, &.show, &:active, &:focus
+							.nav-link
+								color: color-get($mau,trang)
+				.form-inline
+					position: relative
+					button 
+						+pos(abs, 0 0 null null)
+						background: transparent
+						border: 0
+						color: color-get($mau,xam-1)
+						font-size: 0rem
+						&:before
+							content: '\f002'
+							font-family: 'FontAwesome'
+							+pos(abs, 0 .5rem null null)
+							+size(1.5rem,1.5rem)
+							line-height: 1.5rem
+							+fz(1rem)
+							color: color-get($mau, xam-1)
+					input 
+						padding-right: 21px
+						color: color-get($mau,xam-1)
+						&::placeholder
+							color: color-get($mau,xam-1)
+						&:hover, &.active, &.show
+							.nav-link
+								color: color-get($mau,extra)
+					input.searchinput
+						padding-left: .5rem
+						border: 0
+						padding-top: 0
+						padding-bottom: 0
+			.mainnav
+				display: flex
+				flex-direction: colum
+		&.fixedheader
+			&.active
+				.topbar
+					height: 0px
+					overflow: hidden
+				.k-responsive-menu
+					.mainnav
+						.navbar-brand 
+							img
+								max-height: 2.5rem
+					
+	+media-breakpoint-up(xl)
+		.k-responsive-menu
+			.navbar-brand
+				img 
+					max-height: 6.2rem
+					margin-left: 0rem
+			.nav-wrapper
+				ul
+					.nav-item
+						+pad(0 1.5rem)
+						.nav-link
+							text-transform: uppercase
+		&.fixedheader
+			&.active
+				.k-responsive-menu
+					.navbar-brand 
+						img
+							max-height: 3.5rem
+	+media-breakpoint-down(md)
+		.contactinfo
+			font-size: 1.5rem
+			color: color-get($mau,duong-1)
+		.k-responsive-menu
+			.navbar-brand
+				margin: 0 auto 1.5rem
+				img 
+					max-height: 6.2rem
+			ul
+				.nav-item
+					font-size: 1.5rem
+					margin-bottom: 1rem
+			.form-inline
+				position: relative
+				button.searchbutton
+					+pos(abs, 0 0 null null)
+					background: transparent
+					border: 0
+					color: color-get($mau,xam-1)
+					font-size: 0rem
+					&:before
+						content: '\f002'
+						font-family: 'FontAwesome'
+						+pos(abs, 0 .5rem null null)
+						+size(2.5rem,2.5rem)
+						line-height: 2.5rem
+						+fz(1rem)
+						color: color-get($mau, xam-1)
+					i,em 
+						font-size: 1rem
+						line-height: 3rem
+				input
+					width: 100%
+					padding-right: 21px
+					color: color-get($mau,xam-1)
+					height: 2.5rem
+					&::placeholder
+						color: color-get($mau,xam-1)
+				input.searchinput
+					padding-left: .5rem

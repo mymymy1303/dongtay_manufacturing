@@ -1,0 +1,58 @@
+{
+	"SETUP": {
+		"index": {
+			"header": [
+				"header/h-dongtay"
+			],
+			"body": [
+				"boxes/b-home"
+			],
+			"footer": [
+				"footer/f-5"
+			]
+		},
+		"projects": {
+			"body": [
+				"title/t-1",
+				"breadcrumb/b-1",
+				"news/n-projects",
+				"pagination/p-3"
+			]
+		},
+		"projects-ct": {
+			"body": [
+				"boxes/b-project-ct"
+			]
+		},
+		"service": {
+			"body": [
+				"card/c-service"
+			]
+		},
+		"service-ct": {
+			"body": [
+				"tabs/t-service-ct"
+			]
+		},
+		"facilities": {
+			"body": [
+				"slider/s-facilities"
+			]
+		},
+		"quality": {
+			"body": [
+				"boxes/b-quality"
+			]
+		},
+		"quality-ct": {
+			"body": [
+				"boxes/b-quality-ct"
+			]
+		},
+		"recruitment": {
+			"body": [
+				"boxes/b-recruitment"
+			]
+		}
+	}
+}

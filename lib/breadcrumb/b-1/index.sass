@@ -1,0 +1,60 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-breadcrumb-1
+	+pad(1rem 0 0 0)
+	&.bg-blue
+		.main-breadcrumb
+			ol.breadcrumb
+				li
+					color: color-get($mau, trang)
+					+ li
+						&:before
+							color: color-get($mau,main)
+							background-color: color-get($mau, trang)
+					a, span
+						color: color-get($mau, trang)
+	.main-breadcrumb
+		width: 100%
+		display: none
+		+media-breakpoint-up(md)
+			display: block
+		ol.breadcrumb
+			margin-bottom: 0
+			+bor-rad(0)
+			+pad(0)
+			position: relative
+			background: none
+			li
+				+fz(.875rem)
+				position: relative
+				line-height: 1.5rem
+				color: darken(color-get($mau,den-1),0%)
+				display: flex
+				align-items: center
+				a, span
+					color: color-get($mau,den-1)
+					+fz(.875rem)
+					text-decoration: none
+					+transition(.3s ease-in-out)
+					&:hover, &:active, &:focus
+						color: color-get($mau, main)
+					&:hover
+						+fw(700)
+				+ li
+					&:before
+						color: color-get($mau,trang)
+						background-color: color-get($mau, den-1)
+						content: '\f105'
+						font-family: 'FontAwesome'
+						+size(1rem, 1rem)
+						line-height: 1rem
+						text-align: center
+						overflow: hidden
+						+pad(0)
+						+fz(.875rem)
+						+fw(700)
+						+mar(0 .5rem)
+						+bor-rad(50%)

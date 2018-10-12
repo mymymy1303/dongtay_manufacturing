@@ -1,0 +1,46 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-pagination-3
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(0 0 2rem 0)
+	.pagelist
+		.pagination
+			font-size: 0
+			width: 100%
+			margin-bottom: 0
+			background-color: color-get($mau, xam-2)
+			border-radius: 0
+			display: flex
+			justify-content: flex-end
+			.page-item
+				width: 2rem
+				height: 2rem
+				.page-link,span
+					border: 0
+					+size(2rem)
+					line-height: 2rem
+					text-align: center
+					color: color-get($mau, main-extra)
+					+fz(.875rem)
+					+fw(400)
+					background: none
+					padding: 0
+					margin: 0
+					border-radius: 0
+					&:focus, &:active
+						box-shadow: none
+				&.active
+					.page-link,span
+						+fw(700)
+						background-color: color-get($mau, trang)
+						+pos(relative, null)
+						&:before
+							content: ''
+							+pos(abs, 0 null null 0)
+							+size(2rem, 2px)
+							background-color: lighten(color-get($mau, main), 20%)
+							z-index: 1

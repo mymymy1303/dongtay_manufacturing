@@ -1,0 +1,110 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+
+
+.canhcam-card-service
+	+pad(0 0 3rem 0)
+	a
+		text-decoration: none
+	.side-panel
+		background-color: color-get($mau, main)
+		+pad(1rem)
+		margin-left: 15px
+		margin-top: 2rem
+		+media-breakpoint-up(lg)
+			margin-left: 0
+			margin-top: 30px
+		h2
+			color: color-get($mau, trang)
+			+fz(3rem)
+			+fw(300)
+			font-family: 'Open Sans', sans-serif
+			text-transform: uppercase
+			margin-bottom: 2rem
+			span
+				+fw(700)
+		p
+			color: color-get($mau, trang)
+			+fz(.875rem)
+			+fw(400)
+	.canhcam-card-group
+		+media-breakpoint-up(lg)
+			&.row
+				margin-left: 0
+		.canhcam-card
+			margin-top: 2rem
+			+media-breakpoint-up(lg)
+				margin-top: 30px
+			figure
+				display: flex
+				flex-direction: column
+				margin-bottom: 0
+				.canhcam-card-img
+					+pos(relative, null)
+					+size(100%, 10rem)
+					overflow: hidden
+					img
+						+pos(absolute, 50% null null 50%)
+						+transform(translate(-50%, -50%))
+						+size(100%, auto)
+						+media-breakpoint-up(sm)
+							opacity: 0
+					+media-breakpoint-up(sm)
+						+size(100%, auto)
+				.canhcam-card-body
+					display: flex
+					flex-direction: column
+					+pad(1rem)
+					background-color: color-get($mau, trang)
+					.canhcam-card-title
+						+fz(1.125rem)
+						+fw(400)
+						color: color-get($mau, main-extra)
+						+pos(relative, null)
+						text-transform: uppercase
+						&:before
+							+pos(abs, null null -.5rem 0)
+							+size(3rem, 2px)
+							background-color: color-get($mau, main)
+							content: ''
+							z-index: 1
+					.canhcam-card-text
+						+fz(.875rem)
+						+fw(400)
+						color: color-get($mau, den-1)
+						margin: 0
+						margin-top: .5rem
+						+text-clamp(3)
+				+media-breakpoint-up(sm)
+					flex-direction: row
+					.canhcam-card-img
+						flex: 0 0 40%
+						img
+							+size(auto, 100%)
+					.canhcam-card-body
+						flex: 0 0 60%
+				+media-breakpoint-up(md)
+					.canhcam-card-img
+						flex: 0 0 40%
+						height: 15rem
+					.canhcam-card-body
+						flex: 0 0 60%
+				+media-breakpoint-up(lg)
+					flex-direction: column
+					.canhcam-card-img
+						flex: 0 0 100%
+						height: 15rem
+						img
+							+size(auto, auto)
+					.canhcam-card-body
+						flex: 0 0 100%
+						min-height: 15rem
+						.canhcam-card-text
+							+text-clamp(3)
+			+media-breakpoint-up(lg)
+				&:nth-child(2n)
+					figure
+						flex-direction: column-reverse

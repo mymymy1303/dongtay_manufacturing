@@ -1,0 +1,126 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-tabs-service-ct
+	+pad(4rem 0 2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(2rem 0)
+	ul.tabs-nav
+		width: 75%
+		max-height: calc(100% - 4.2rem)
+		height: 100%
+		overflow-y: scroll
+		background-color: color-get($mau, main)
+		position: fixed
+		top: 4.2rem
+		left: -100vw
+		padding: 0
+		margin: 0
+		z-index: 99
+		transition: .5s
+		display: block
+		+media-breakpoint-up(sm)
+			width: 60%
+		+media-breakpoint-up(lg)
+			display: none
+		&.tabs-nav-active
+			left: 0
+		.tabs-nav-item
+			border-bottom: 1px solid color-get($mau, trang)
+			&:last-child
+				border-bottom: 0
+				padding-bottom: 4rem
+			&:first-child
+				padding-top: 4rem
+			.tabs-nav-link
+				+pad(.6rem 1.25rem)
+				color: color-get($mau, trang)
+				text-decoration: none
+				display: block
+				+fw(400)
+				+fz(1rem)
+			&:hover, &.tabs-nav-item-active
+				background-color: color-get($mau, main-extra)
+	.toggle
+		+pos(fixed, 5rem null null 1rem)
+		+size(3rem)
+		background-color: color-get($mau, trang)
+		z-index: 100
+		cursor: pointer
+		+bor-rad(4px)
+		overflow: hidden
+		display: block
+		+media-breakpoint-up(lg)
+			display: none
+		span
+			+pos(abs, 50% null null 50%)
+			+transform(translate(-50%, -50%) rotate(0deg))
+			width: 2rem
+			height: 3px
+			background-color: color-get($mau, den-1)
+			box-shadow: 0 -.75rem 0 color-get($mau, den-1),0 .75rem 0 color-get($mau, den-1)
+			transition: transform, box-shadow
+			transition-delay: 0s, .5s
+			transition-duration: .5s, .5s
+			&:before
+				content: ''
+				+pos(abs, -4rem null null 50%)
+				+transform(translate(-50%, -50%))
+				width: 3px
+				height: 2rem
+				transition: .5s
+				transition-delay: .5s
+				background-color: color-get($mau, den-1)
+		&.toggle-active
+			span
+				box-shadow: 4rem -.75rem 0 color-get($mau, den-1),-4rem .75rem 0 color-get($mau, den-1)
+				+transform(translate(-50%, -50%) rotate(-315deg))
+				transition: box-shadow, transform
+				transition-delay: 0s, .5s
+				transition-duration: .5s, .5s
+				&:before
+					top: 50%
+					transition-delay: .75s
+	.tab
+		display: none
+		&.tab-active
+			display: block
+		figure
+			img
+				max-width: 100%
+				height: auto
+				width: 100%
+		h2
+			+fz(1.25rem)
+			+fw(700)
+			margin-bottom: 0
+			+pad(0 0 .5rem 0)
+			text-transform: uppercase
+			color: color-get($mau, den-1)
+			+pos(relative, null)
+			&:before
+				+pos(abs, null null 0 0)
+				content: ''
+				+size(3rem, 2px)
+				background-color: color-get($mau, main-extra)
+		p
+			+mar(.5rem 0 1rem 0)
+	.tabs-header
+		display: block
+		height: 100%
+		background-color: color-get($mau, main)
+		list-style: none
+		padding: 0
+		.nav-item
+			border-bottom: 1px solid color-get($mau, trang)
+			&.nav-active
+				background-color: color-get($mau, main-extra)
+			.tabs-nav-link
+				color: color-get($mau, trang)
+				text-decoration: none
+				+pad(.5rem 1.25rem)
+				display: block
+		+media-breakpoint-down(md)
+			display: none

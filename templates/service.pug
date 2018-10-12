@@ -1,0 +1,13 @@
+extends _layout/layout.pug
+block variables
+	- var title = "service"
+	- var description = "Description for service page"
+	- var bodyclass = "service"
+	- var href = "/service.html"
+block header
+	include ../lib/header/h-dongtay/index.pug
+block body
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/card/c-service/index.pug
+block footer
+	include ../lib/footer/f-5/index.pug

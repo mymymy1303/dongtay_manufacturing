@@ -1,0 +1,14 @@
+extends _layout/layout.pug
+block variables
+	- var title = "quality"
+	- var description = "Description for quality page"
+	- var bodyclass = "quality"
+	- var href = "/quality.html"
+block header
+	include ../lib/header/h-dongtay/index.pug
+block body
+	include ../lib/title/t-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/boxes/b-quality/index.pug
+block footer
+	include ../lib/footer/f-5/index.pug

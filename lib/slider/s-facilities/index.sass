@@ -1,0 +1,64 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+	
+	
+.facilities-slider
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.slider-fac
+		max-width: 810px
+		background-color: color-get($mau,main)
+		padding: 1.5rem 1.2rem
+		max-height: 491px
+		@media(max-width: 576px)
+			padding: 0 1.5rem 1.5rem
+		.item
+			.img-block
+				position: relative
+				max-height: 456px
+				overflow: hidden
+				img 
+					margin: 0 auto
+			.title-block
+				position: absolute
+				bottom: 0
+				color: color-get($mau,trang)
+				left: 0
+				background-color:  rgba(0, 0, 0, 0.4)
+				font-size: 1.5rem
+				line-height: 1.375rem
+	.slider-nav
+		max-width: 100%
+		overflow: hidden
+		background-color: color-get($mau,main)
+		padding: 0 1rem
+		max-height: 491px
+		.item
+			overflow: hidden
+			.img-block
+				max-height: 136px
+				overflow: hidden
+				img 
+		.slick-prev
+			display: none
+		.slick-next
+			width: 0
+			height: 0
+			z-index: 1
+			border-style: solid
+			border-width: 11px 44.5px 0 44.5px
+			border-color: #ffffff transparent transparent transparent
+			top: 96%
+			left: 50%
+			transform: translateX(-50%)
+			&:before
+				content: ' '
+			@media(max-width: 767px)
+				top: 94.5%
+		.slick-active
+			filter: grayscale(100%)
+		.slick-current
+			filter: grayscale(0)

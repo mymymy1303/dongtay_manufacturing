@@ -1,0 +1,53 @@
+header.dongtay-header
+	.k-menu-bar.container
+		#logo.mr-auto
+			img(src="./img/dongtay/_global/logo.png", alt="")
+		button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+			i.mdi.mdi-menu
+	#demoResAllInOneMenu.container-fluid.k-responsive-menu.k-menu-resize.px-0
+		.k-menu-bar
+			button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+				i.mdi.mdi-close
+		.nav.mainnav.w-100
+			.container-fluid.px-0
+				.col.px-0
+					.topbar.w-100
+						.container.d-flex.py-2
+							.navbar-brand.mr-auto
+								img(src="./img/dongtay/_global/logo.png", alt="")
+							ul.contactinfo.pl-3.mt-2.mt-lg-0.pr-0(k-menu-map-to="#contactinfotel")
+								li 
+									i.fa.fa-phone
+									span.link 090909090808
+							ul.contactinfo.pl-3.pr-0(k-menu-map-to="#contactinfoemail")
+								li 
+									i.fa.fa-envelope
+									span.link email@gmail.com
+				.col.nav-wrapper
+					.container 
+						.row 
+							.col.d-flex.justify-content-lg-between.align-items-lg-center.flex-column-reverse.flex-lg-row
+								ul.list-inline.mb-0.d-flex.d-lg-inline-block.flex-column
+									li.nav-item.list-inline-item.mr-0
+										a.nav-link(href='./index.html').p-0 Home
+									li.nav-item.list-inline-item.mr-0
+										a.nav-link(href='./service.html').p-0 Service
+									li.nav-item.list-inline-item.mr-0
+										a.nav-link(href='./facilities.html').p-0 Facilities
+									li.nav-item.list-inline-item.mr-0
+										a.nav-link(href='./quality.html').p-0 Quality
+									li.nav-item.list-inline-item.mr-0
+										a.nav-link(href='./projects.html').p-0 Project
+									li.nav-item.list-inline-item.mr-0
+										a.nav-link(href='/recruitment.html').p-0 Recruitment
+									li.nav-item.list-inline-item.mr-0.mb-0
+										a.nav-link(href='/contact.html').p-0 Contact
+								form.form-inline.px-0.mb-3.mb-lg-0
+									button(type="submit")
+										i.fa.fa-search(aria-hidden="true")
+									input.form-control.form-control-sm(type="text" placeholder="Search" aria-label="Search")
+
+								
+					#contactinfotel
+					#contactinfoemail
+
