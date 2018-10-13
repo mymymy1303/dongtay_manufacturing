@@ -39,22 +39,45 @@ section.canhcam-form-1
 								span.text-danger (*)
 							input#name.form-control(type='text', placeholder='Name', data-error="Vui lòng nhập thông tin", required)
 							.help-block.with-errors
+						.form-group.col-md-6.form-file
+							label(for='file1').file-trigger Attach file
+							input#file1.form-control(type='file', placeholder='Attach file').file-upload
+							.help-block.with-errors
+					.row
 						.form-group.col-md-6
 							label(for='Email') Email
 							input#Email.form-control(type='text', placeholder='Email', data-error="Vui lòng nhập thông tin", pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$", required)
+							.help-block.with-errors
+						.form-group.col-md-6.form-file
+							label(for='file2').file-trigger Attach file
+							input#file2.form-control(type='file', placeholder='Attach file').file-upload
 							.help-block.with-errors
 					.row
 						.form-group.col-md-6
 							label(for='Phone') Phone
 							input#Phone.form-control(type='text', placeholder='Phone', data-error="Vui lòng nhập thông tin", pattern="^[_A-z0-9]{1,}$", required)
 							.help-block.with-errors
+						.form-group.col-md-6.form-file
+							label(for='file3').file-trigger Attach file
+							input#file3.form-control(type='file', placeholder='Attach file').file-upload
+							.help-block.with-errors
+					.row
 						.form-group.col-md-6
-							label(for='Address') Address
-							input#Address.form-control(type='text', placeholder='Address')
+							label(for='Sendto') Send to
+							select#Sendto.form-control(type='text', placeholder='Send to', data-error="Vui lòng nhập thông tin", required)
+								option( selected, disabled, hidden) Send to
+								option(value="Lorem 1") Lorem 1
+								option(value="Lorem 2") Lorem 2
+								option(value="Lorem 3") Lorem 3
+							i.fas.fa-angle-down.select-arrow
+							.help-block.with-errors
+						.form-group.col-md-6
+							label(for='Title') Title
+							input#Title.form-control(type='text', placeholder='Title')
 					.row
 						.form-group.col
 							label(for='sms') Message
-							textarea#sms.form-control(name="sms", cols="30", rows="5")
+							textarea#sms.form-control(name="sms", cols="30", rows="5",placeholder='Message')
 
 					.row
 						.col
