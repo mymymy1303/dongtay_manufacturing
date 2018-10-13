@@ -53,6 +53,11 @@
 			"body": [
 				"boxes/b-recruitment"
 			]
+		},
+		"contact": {
+			"body": [
+				"form/f-1"
+			]
 		}
 	}
 }
