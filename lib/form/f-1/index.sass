@@ -7,17 +7,52 @@
 	+pad(2rem 0)
 	+media-breakpoint-up(lg)
 		+pad(4rem 0)
+	h2 
+		font-size: 1.875rem
+		color: color-get($mau,den-1)
+		padding-bottom: 0.5rem
+		&:before
+			display: block
+			width: 50px
+			height: 2px
+			background: color-get($mau,main)
+			content: ' '
+			+pos(abs, calc(100% + -4px) null null 2.5%)
+			+transform(translateX(-50%))
+			@media(max-width: 768px)
+				display: none
 	.info
-		h3
-			+fz(1.3rem)
-			text-transform: uppercase
 		.inf
-			+pad(2rem)
-			h2
-				+fz(1.3rem)
+			+pad(0.5rem 2rem 2rem)
+			h3	
+				+fz(1.125rem)
+				text-transform: uppercase
+				color: color-get($mau,main-extra)
+				font-weight: 700
+				p 
+					color: color-get($mau,den)
+					font-size: 0.875rem
+					font-weight: 400
+					line-height: 1.5rem
+					text-transform: none
+					margin-bottom: 0
+					i 
+						padding-right: 1rem
+						color: color-get($mau,main-extra)
 	form
+		h2
+			color: color-get($mau,den-1)
 		.help-block
 			ul
 				margin-bottom: 0
 				+fz(.9rem)
 				color: color-get($mau,do-1)
+		label
+			display: none
+		.form-group
+			.form-control
+				border: 1px solid color-get($mau,main-extra)
+		.btn-outline-primary
+			background: color-get($mau,main-extra)
+			opacity: 1
+			color: color-get($mau,trang)
