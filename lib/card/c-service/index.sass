@@ -38,6 +38,11 @@
 			margin-top: 2rem
 			+media-breakpoint-up(lg)
 				margin-top: 30px
+			&:hover, &:focus, &:active
+				.canhcam-card-body
+					background-color: color-get($mau, main)
+					.canhcam-card-title, .canhcam-card-text
+						color: color-get($mau, trang)
 			figure
 				display: flex
 				flex-direction: column
@@ -59,12 +64,14 @@
 					flex-direction: column
 					+pad(1rem)
 					background-color: color-get($mau, trang)
+					+transition(.3s ease-in-out)
 					.canhcam-card-title
 						+fz(1.125rem)
 						+fw(400)
 						color: color-get($mau, main-extra)
 						+pos(relative, null)
 						text-transform: uppercase
+						+transition(.3s ease-in-out)
 						&:before
 							+pos(abs, null null -.5rem 0)
 							+size(3rem, 2px)
@@ -78,6 +85,7 @@
 						margin: 0
 						margin-top: .5rem
 						+text-clamp(3)
+						+transition(.3s ease-in-out)
 				+media-breakpoint-up(sm)
 					flex-direction: row
 					.canhcam-card-img

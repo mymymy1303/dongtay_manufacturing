@@ -28,8 +28,12 @@
 			color: color-get($mau,den-1)
 	.certificates-img
 		.img-block
+			margin-top: 1.25rem
 			img
 				max-width: 100%
 				height: auto
 			&:first-child
-				background-color: color-get($mau, main-extra)
+				box-shadow: 0 0 0 1.25rem color-get($mau, main)
+				padding: 0 !important
+				+media-breakpoint-up(sm)
+					margin-right: 1.25rem
