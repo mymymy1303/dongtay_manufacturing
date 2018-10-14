@@ -11,11 +11,12 @@
 					<div class="row">
 						<div class="col-sm-6 col-lg-3">
 							<div class="img-block d-flex justify-content-center align-items-center mb-3 mb-sm-0">
-								<img class="img-fluid">
+								<xsl:apply-templates select="NewsImages" mode="Second"></xsl:apply-templates>
+								<!-- <img class="img-fluid">
 								<xsl:attribute name="src">
 									<xsl:value-of select="/NewsDetail/ImageUrl"></xsl:value-of>
 								</xsl:attribute>
-								</img>
+								</img> -->
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-9">
@@ -31,5 +32,19 @@
 		</section>
 	</xsl:template>
 
-
+	<xsl:template match="NewsImages" mode="Second">
+		<div class="img-block p-4">
+			<img class="img-fluid">
+			<xsl:attribute name="src">
+				<xsl:value-of select="ImageUrl"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="alt">
+				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="title">
+				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+			</xsl:attribute>
+			</img>
+		</div>
+	</xsl:template>
 </xsl:stylesheet>
