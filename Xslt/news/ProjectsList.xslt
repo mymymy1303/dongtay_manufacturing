@@ -26,7 +26,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<h2 class="title-with-pattern">
+					<h2 class="title-with-pattern mt-lg-4">
 						<xsl:value-of select="/NewsList/CommonProjects" />
 					</h2>
 				</div>

@@ -22,9 +22,9 @@
 							<div class="img-block mb-3">
 								<a href="javascript:void(0)">
 									<img class="img-fluid">
-										<xsl:attribute name="src">
-											<xsl:value-of select="/NewsDetail/ImageUrl"></xsl:value-of>
-										</xsl:attribute>
+									<xsl:attribute name="src">
+										<xsl:value-of select="/NewsDetail/NewsImages/ImageUrl"></xsl:value-of>
+									</xsl:attribute>
 									</img>
 								</a>
 							</div>

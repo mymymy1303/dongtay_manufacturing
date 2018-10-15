@@ -9,8 +9,8 @@
 			<article>
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-6 col-lg-3">
-							<div class="img-block d-flex justify-content-center align-items-center mb-5 mb-sm-0">
+						<div class="col-sm-5 col-lg-3">
+							<div class="img-block d-flex justify-content-center justify-content-lg-left align-items-center mb-5 mb-sm-0 ml-lg-2">
 								<img class="img-fluid">
 								<xsl:attribute name="src">
 									<xsl:value-of select="/NewsDetail/NewsImages/ImageUrl"></xsl:value-of>
@@ -18,9 +18,9 @@
 								</img>
 							</div>
 						</div>
-						<div class="col-sm-6 col-lg-9">
+						<div class="col-sm-7 col-lg-9">
 							<div class="text-block">
-								<p>
+								<p class="pl-lg-3 pl-xl-0">
 									<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								</p>
 							</div>

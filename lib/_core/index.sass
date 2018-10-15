@@ -347,14 +347,17 @@ header
 					flex: 0 0 auto
 					padding-left: .9375rem
 
-.dongtay-recruitment, .dongtay-quality
-	h2 
+.dongtay-recruitment, .dongtay-quality, .dongtay-projects
+	h2.title-with-pattern
 		font-size: 1.875rem
 		color: color-get($mau,den-1)
 		+pos(relative, null)
 		padding-bottom: 1.5rem
 		+media-breakpoint-up(md)
 			padding-bottom: .5rem
+			&:after
+				height: 0.7rem
+				top: 40%
 		&:before
 			+size(3rem, 2px)
 			background: color-get($mau,main)
@@ -364,7 +367,16 @@ header
 				display: none
 
 .canhcam.news-detail-page
-	h2
-		display: none
-	.partner-slider
-		display: none
+	.quality-box
+		h2
+			display: none
+		.partner-slider
+			display: none
+	.project-ct-box
+		h2
+			&:before
+				display: none
+
+.dongtay-recruitment
+	.modulepager
+		+pad(1.5rem 0)
