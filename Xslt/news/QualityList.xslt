@@ -5,7 +5,7 @@
 	<!--Begin News-->
 	<xsl:template match="/">
 		<xsl:if test="count(/NewsList/News) > 0">
-			<div class="certificates-text mt-3 mt-md-0">
+			<div class="certificates-text mt-3">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
 		</xsl:if>
@@ -15,7 +15,7 @@
 		<p>
 			<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 		</p>
-		<a class="certificates-img d-flex justify-content-center align-items-center flex-column flex-sm-row">
+		<a class="certificates-img d-flex justify-content-center align-items-center flex-column flex-sm-row pl-sm-4 pl-lg-0">
 			<xsl:attribute name="href">
 				<xsl:value-of select="Url"></xsl:value-of>
 			</xsl:attribute>

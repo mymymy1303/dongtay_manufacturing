@@ -101,7 +101,7 @@
 					.canhcam-card-body
 						flex: 0 0 60%
 				+media-breakpoint-up(lg)
-					flex-direction: column
+					flex-direction: column-reverse
 					.canhcam-card-img
 						flex: 0 0 100%
 						height: 15rem
@@ -113,6 +113,6 @@
 						.canhcam-card-text
 							+text-clamp(3)
 			+media-breakpoint-up(lg)
-				&:nth-child(2n)
+				&:nth-child(3n + 2)
 					figure
-						flex-direction: column-reverse
+						flex-direction: column
