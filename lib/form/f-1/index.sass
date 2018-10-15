@@ -115,6 +115,19 @@
 				display: flex
 				justify-content: center
 				align-items: center
+		.form-group.frm-captcha
+			+pos(relative, null)
+			&:before
+				+size(2.5rem)
+				content: '*'
+				+pos(abs, 0 0 null null)
+				color: color-get($mau, do-1)
+				+fz(1.5rem)
+				display: flex
+				justify-content: center
+				align-items: center
+				+media-breakpoint-up(lg)
+					+pos(abs, 2.5rem null null calc(40% - .9375rem - 2.5rem))
 
 		+media-breakpoint-up(md)
 			div

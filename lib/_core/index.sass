@@ -319,6 +319,32 @@ header
 			.col-md-7.col-lg-8
 				.ModuleContent
 					+size(100%, 100%)
+		.form-group.frm-captcha
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			align-items: flex-end
+			justify-content: flex-start
+			.frm-captcha-input
+				flex: 0 0 100%
+			.RadCaptcha
+				flex: 0 0 100%
+				a
+					margin-top: 1rem
+					color: color-get($mau, main)
+					&:hover
+						color: color-get($mau, main-extra)
+			+media-breakpoint-up(md)
+				.RadCaptcha
+					a
+						margin-left: 1.875rem
+			+media-breakpoint-up(lg)
+				.frm-captcha-input
+					flex: 0 0 40%
+					padding-right: .9375rem
+				.RadCaptcha
+					flex: 0 0 auto
+					padding-left: .9375rem
 
 .dongtay-recruitment
 	h2 
