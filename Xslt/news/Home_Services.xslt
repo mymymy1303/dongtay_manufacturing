@@ -14,7 +14,7 @@
 	<xsl:template match="News">
 		<a>
 			<xsl:attribute name="href">
-				<xsl:value-of select="Url"></xsl:value-of>
+				<xsl:value-of select="/NewsList/UrlText"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="target">
 				<xsl:value-of select="Target"></xsl:value-of>

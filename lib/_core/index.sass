@@ -313,6 +313,21 @@ header
 		// .modulepager
 		// 	padding-bottom: 0 !important
 		// 	padding-top: 30px !important
+.services-detail-title
+	font-size: 1.4rem
+	color: color-get($mau,den-1)
+	+pos(relative, null)
+	padding-bottom: .5rem
+	+pos(relative, null)
+	text-transform: uppercase
+	+fw(700)
+	&:before
+		+size(3rem, 2px)
+		background: color-get($mau,main)
+		content: ''
+		+pos(abs, null null 0 .15rem)
+		@media(max-width: 768px)
+			display: none
 
 .dongtay-contact
 	.canhcam-form-1
@@ -347,7 +362,7 @@ header
 					flex: 0 0 auto
 					padding-left: .9375rem
 
-.dongtay-recruitment, .dongtay-quality, .dongtay-projects
+.dongtay-recruitment, .dongtay-quality, .dongtay-projects, .dongtay-contact
 	h2.title-with-pattern
 		font-size: 1.875rem
 		color: color-get($mau,den-1)
@@ -376,6 +391,8 @@ header
 		h2
 			&:before
 				display: none
+	.side-panel
+		display: none
 
 .dongtay-recruitment
 	.modulepager

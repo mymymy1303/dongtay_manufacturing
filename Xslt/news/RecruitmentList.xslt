@@ -81,6 +81,9 @@
 						<div class="crew-card-email">
 							<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 						</div>
+						<a class="btn crew-card-button" href="#">
+							Apply for this job
+						</a>
 					</div>
 				</div>
 			</div>

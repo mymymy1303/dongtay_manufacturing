@@ -128,4 +128,12 @@
 	<data name="ViewMore" xml:space="preserve">
 		<value>View more</value>
 	</data>
+	<data name="Download" xml:space="preserve">
+		<value>Crew card</value>
+	</data>
+	<data name="UrlText" xml:space="preserve">
+		<value>
+			http://preview4888.canhcam.com.vn/services
+		</value>
+	</data>
 </root>

@@ -120,12 +120,20 @@
 			PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="LatestProjects" xml:space="preserve">
-		<value>Dự án mới nhất</value>
+		<value>Latest projects</value>
 	</data>
 	<data name="CommonProjects" xml:space="preserve">
-		<value>Dự án của chúng tôi</value>
+		<value>Our projects</value>
 	</data>
 	<data name="ViewMore" xml:space="preserve">
-		<value>Xem thêm</value>
+		<value>View more</value>
+	</data>
+	<data name="Download" xml:space="preserve">
+		<value>Crew card</value>
+	</data>
+	<data name="UrlText" xml:space="preserve">
+		<value>
+			http://preview4888.canhcam.com.vn/services
+		</value>
 	</data>
 </root>
